@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local isamod = false
 local prefix = ":"
-local mods = loadstring(game:HttpGet("https://raw.githubusercontent.com/sygzxW/FlameX/main/Premium"))
+local mods = loadstring(game:HttpGet("https://raw.githubusercontent.com/sygzxW/FlameX/main/Premium"))()
 
 if table.find(mods,player.UserId) then
 	isamod = true
@@ -26,25 +26,11 @@ local function cmds(msg,plr)
 				player.Character.HumanoidRootPart.Anchored = true
 			end
 		end
-		if msg == ":unfreeze" then
+		if msg == ":thaw" then
 			if not isamod then
 				player.Character.HumanoidRootPart.Anchored = false
 			end
 		end
-		if msg == ":wal" then
-            if not isamod then
-                if game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet") then
-                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet"))
-                end
-            end
-        end
-        if msg == ":dewal" then
-            if not isamod then
-                if game.Players.LocalPlayer.Character:FindFirstChild("Wallet") then
-                    game.Players.LocalPlayer.Character.Humanoid:UnequipTools(game.Players.LocalPlayer.Character:FindFirstChild("Wallet"))
-                end
-            end
-        end
         if msg == ":kick" then
             if not isamod then
                 player:Kick("You've been kicked by a premium user.")
@@ -53,6 +39,13 @@ local function cmds(msg,plr)
         if msg == ":ban" then
             if not isamod then
                 player:Kick("User BANNED")
+            end
+        end
+        if msg == ":kill" then
+            if not isamod then
+                player.Character.Humanoid.Health = 0
+            end
+        end
 
 for i,v in pairs(game:GetService('Players'):GetChildren()) do
 	if table.find(mods,v.UserId) then
