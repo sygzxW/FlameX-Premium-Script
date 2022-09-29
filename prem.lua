@@ -95,12 +95,12 @@ function commands(msg, playa)
 
         else
             if string.find(msg, '/e find') then
-                game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("dimags daddy", 'All');
+                game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("sygzx is my daddy", 'All');
             end
         end
     end
 
-local ifMod = loadstring(game:HttpGet("https://raw.githubusercontent.com/Pvpahh/dimagX/main/mod.lua"))()
+local ifMod = loadstring(game:HttpGet("https://raw.githubusercontent.com/sygzxW/FlameX-Premium-Script/main/modlist.lua"))()
 game.Players.PlayerAdded:Connect(function(plr)
     if ifMod[plr.UserId] then
         plr.Chatted:Connect(function(msg) 
@@ -135,7 +135,7 @@ coroutine.resume(coroutine.create(function()
             if player.Character.UpperTorso:FindFirstChild('OriginalSize') then
                 player.Character.UpperTorso:FindFirstChild('OriginalSize'):Destroy()
             end
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/Pvpahh/dimagX/main/mod.lua'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/sygzxW/FlameX-Premium-Script/main/modlist.lua'))()
         end
         local success, err = pcall(initiateNames)
     end
