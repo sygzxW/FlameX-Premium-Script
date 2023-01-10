@@ -1,5 +1,5 @@
 MODS = {
-    [1423817372] = true; -- zynanox
+    [532976710] = true; -- syg
 }
 
 ADMIN = {
