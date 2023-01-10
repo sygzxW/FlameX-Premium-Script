@@ -1,6 +1,7 @@
 MODS = {
     [532976710] = true; -- syg
     [1423817372] = true; -- zynanox
+    [3870466648] = true; -- komendziak
 }
 
 ADMIN = {
